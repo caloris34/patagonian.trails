@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mapa de trekking — Parque Nacional Nahuel Huapi</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script>
+/* Si un archivo de datos/ tiene un error de escritura, el navegador no lo puede leer.
+   Esto anota en qué archivo y línea pasó, para mostrarlo arriba del panel. */
+window.__errores=[];
+addEventListener('error',e=>{
+  const f=(e.filename||'').split('/').slice(-2).join('/');
+  if(!/^datos\//.test(f))return;
+  __errores.push([f+(e.lineno?', línea '+e.lineno:''),'Error de escritura: el archivo no se pudo leer. Revisá comas, comillas y llaves cerca de esa línea ('+e.message+').']);
+});
+</script>
+</head>
+<body>
+<div id="app">
+  <header id="bar">
+    <div class="brand"><b>Mapa de trekking</b><span>Parque Nacional Nahuel Huapi. Versión de prueba</span></div>
+    <div class="ctl"><span id="ld">Dificultad</span><div class="chips" id="chips" role="group" aria-labelledby="ld"></div></div>
+    <a class="toplink" href="info-utiles.html">Info útiles</a>
+  </header>
+  <div id="mapwrap">
+    <svg id="map" data-z="1" role="img" aria-label="Mapa de senderos del Parque Nacional Nahuel Huapi, de Villa Traful al río Villegas"></svg>
+    <div class="scale" id="scale"><span></span><i></i></div>
+    <div class="zb"><button id="zin" aria-label="Acercar">+</button><button id="zout" aria-label="Alejar">−</button><button id="zre" aria-label="Ver todo" style="font-size:15px">todo</button></div>
+    <div class="attr"><b>Trazas sin verificar: no usar para navegar.</b> Senderos, lagos y cumbres: © colaboradores de OpenStreetMap (noviembre de 2026). Relieve: SRTM.</div>
+  </div>
+  <aside id="panel" aria-live="polite"><div id="avisos" role="alert" hidden></div><div class="pin" id="pin"></div></aside>
+</div>
+<!-- geometría generada: no editar -->
+<script src="geo/geometria.js"></script>
+<script src="geo/relieve.js"></script>
+<!-- base de datos editable -->
+<script src="datos/puntos.js"></script>
+<script src="datos/tramos.js"></script>
+<script src="datos/travesias.js"></script>
+<!-- lógica -->
+<script src="app.js"></script>
+</body>
+</html>

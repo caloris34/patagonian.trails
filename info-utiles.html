@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Info útiles — Mapa de trekking</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<!--
+  PÁGINA ESTÁTICA: se edita directamente acá.
+  · "Cuidar el lugar": cada norma es un <li>. El cuadrado ■ marca las que son norma del parque.
+    El texto dentro de <span class="ans"> es la respuesta a "¿Por qué?".
+  · "Emergencia": cada contacto es una línea <div class="row"> con nombre (k) y valor (v).
+-->
+<body class="info-page">
+<header id="bar">
+  <div class="brand"><b>Mapa de trekking</b><span>Parque Nacional Nahuel Huapi. Versión de prueba</span></div>
+  <a class="toplink" href="index.html">Volver al mapa</a>
+</header>
+
+<main class="info-main">
+  <p class="kind">Antes de salir</p>
+  <h1 class="t">Info útiles</h1>
+
+  <section class="blk">
+    <h2>Cuidar el lugar</h2>
+    <ul class="plain">
+      <li>No se puede hacer fuego. Solo calentador. <b class="mk of" title="Norma del parque">■</b>
+        <details class="why"><summary>¿Por qué?</summary><span class="ans">El bosque andino patagónico no está adaptado al fuego. Una lenga o un coihue quemado no rebrota y la recuperación lleva más de un siglo. Casi todos los incendios del parque arrancan de una fogata mal apagada o una colilla.</span></details></li>
+      <li>No se puede entrar con perros. <b class="mk of" title="Norma del parque">■</b>
+        <details class="why"><summary>¿Por qué?</summary><span class="ans">El olor y el ladrido llegan mucho más lejos que el perro. El huemul, en peligro de extinción, y el pudú abandonan las zonas donde detectan perros. Además les transmiten moquillo y parvovirus a los carnívoros nativos.</span></details></li>
+      <li>No cortar camino fuera de la senda.
+        <details class="why"><summary>¿Por qué?</summary><span class="ans">En mallines y pendientes el atajo se vuelve canaleta: el agua lo toma como cauce y se lleva el suelo. Lo que ahorra dos minutos deja una marca que otros después siguen.</span></details></li>
+      <li>El baño, lejos del agua y enterrado.
+        <details class="why"><summary>¿Por qué?</summary><span class="ans">A más de 70 metros de arroyos y lagunas, en un pozo de unos 20 cm, y el papel se saca en una bolsa. El agua que tomás arriba viene de donde pasó gente antes que vos.</span></details></li>
+      <li>Todo lo que entra, sale. Incluidas las cáscaras.
+        <details class="why"><summary>¿Por qué?</summary><span class="ans">Con frío, una cáscara tarda años en degradarse. Y la fauna que aprende a asociar gente con comida termina mal.</span></details></li>
+    </ul>
+    <p class="fine"><b class="mk of">■</b> Norma del Parque Nacional Nahuel Huapi. Fuera del parque, como en el Parque Municipal Llao Llao o el cerro San Martín, las reglas propias de cada lugar quedan a confirmar.</p>
+  </section>
+
+  <section class="emerg">
+    <h2>Emergencia</h2>
+
+    <div class="zona">
+      <h3>Sector central del parque</h3>
+      <div class="row"><span class="k">ICE Parques Nacionales</span><span class="v">105</span></div>
+      <div class="row"><span class="k">ICE directo</span><span class="v">0294 442-2479</span></div>
+      <div class="row"><span class="k">VHF ICE</span><span class="v">155.675</span></div>
+      <div class="row"><span class="k">VHF Club Andino</span><span class="v">148.450</span></div>
+      <div class="row"><span class="k">Comisión de Auxilio</span><span class="v">0294 463-6960</span></div>
+    </div>
+
+    <div class="zona">
+      <h3>Zona Tronador</h3>
+      <div class="row"><span class="k">ICE Parques Nacionales</span><span class="v">105</span></div>
+      <div class="row"><span class="k">ICE directo</span><span class="v">0294 442-2479</span></div>
+      <div class="row"><span class="k">VHF ICE</span><span class="v">155.675 y 150.335</span></div>
+      <div class="row"><span class="k">VHF Club Andino</span><span class="v">148.450</span></div>
+      <div class="row"><span class="k">Comisión de Auxilio</span><span class="v">0294 463-6960</span></div>
+    </div>
+
+    <div class="zona">
+      <h3>Ejido municipal (Llao Llao, cerro San Martín)</h3>
+      <div class="row"><span class="k">Protección Civil</span><span class="v">103</span></div>
+      <div class="row"><span class="k">Protección Civil directo</span><span class="v">0294 442-8276</span></div>
+      <div class="row"><span class="k">VHF Protección Civil</span><span class="v">149.335</span></div>
+      <div class="row"><span class="k">ICE Parques Nacionales</span><span class="v">105</span></div>
+      <div class="row"><span class="k">Comisión de Auxilio</span><span class="v">0294 463-6960</span></div>
+    </div>
+
+    <p>La cobertura de VHF depende del relieve. Mensajes satelitales: comisiondeauxiliocab@gmail.com, solo emergencias.</p>
+  </section>
+
+  <section class="blk">
+    <h2>Registro de trekking</h2>
+    <p class="reg"><a href="https://www.nahuelhuapi.gov.ar/trekking-y-actividades-de-montana/" target="_blank" rel="noopener">Hacer el registro en la web del parque</a></p>
+  </section>
+</main>
+</body>
+</html>
